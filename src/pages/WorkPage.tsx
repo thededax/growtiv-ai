@@ -3,24 +3,21 @@ import { useSearchParams, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Globe, 
-  Bot, 
   Sparkles, 
   ArrowUpRight, 
   CheckCircle2, 
-  Layers, 
-  ExternalLink 
+  ExternalLink,
+  Layers
 } from 'lucide-react';
-import { PROJECTS } from '../data/projects';
+import { PROJECTS, ProjectCategory } from '../data/projects';
 import SEO from '../components/SEO';
 
-type FilterCategory = 'all' | 'websites-software' | 'ai-systems' | 'demos' | 'client-projects';
+type FilterCategory = 'all' | ProjectCategory;
 
 const FILTER_TABS: { id: FilterCategory; label: string; icon?: React.ComponentType<{ className?: string }> }[] = [
-  { id: 'all', label: 'All Work' },
-  { id: 'websites-software', label: 'Websites & Software', icon: Globe },
-  { id: 'ai-systems', label: 'AI Systems', icon: Bot },
-  { id: 'demos', label: 'Interactive Demos', icon: Sparkles },
-  { id: 'client-projects', label: 'Client Projects', icon: Layers },
+  { id: 'all', label: 'All Projects', icon: Layers },
+  { id: 'salons-wellness', label: 'Salons & Luxury', icon: Sparkles },
+  { id: 'cafes-dining', label: 'Cafes & Dining', icon: Globe },
 ];
 
 export default function WorkPage() {
@@ -30,7 +27,7 @@ export default function WorkPage() {
 
   useEffect(() => {
     const categoryParam = searchParams.get('category') as FilterCategory | null;
-    if (categoryParam && ['all', 'websites-software', 'ai-systems', 'demos', 'client-projects'].includes(categoryParam)) {
+    if (categoryParam && ['all', 'salons-wellness', 'cafes-dining'].includes(categoryParam)) {
       setActiveFilter(categoryParam);
     }
   }, [searchParams]);
@@ -46,18 +43,14 @@ export default function WorkPage() {
 
   const filteredProjects = PROJECTS.filter((p) => {
     if (activeFilter === 'all') return true;
-    if (activeFilter === 'websites-software') return p.category === 'websites-software';
-    if (activeFilter === 'ai-systems') return p.category === 'ai-systems';
-    if (activeFilter === 'demos') return p.projectType === 'Interactive Demo';
-    if (activeFilter === 'client-projects') return p.projectType === 'Client Project';
-    return true;
+    return p.category === activeFilter;
   });
 
   return (
     <>
       <SEO
-        title="Our Work — Websites, Software & Practical AI Systems"
-        description="Explore GrowtivAI's client websites, custom software, and practical AI solutions built for growing businesses."
+        title="Our Work — Real Client Websites & Digital Systems"
+        description="Explore GrowtivAI's live client projects including Urbanity Hair Atelier, 90ml Drunkyard Cafe, and Desi Chulha Restaurant."
         canonicalPath="/work"
       />
 
@@ -67,7 +60,7 @@ export default function WorkPage() {
         <div className="max-w-3xl mb-12 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-emerald-400 text-xs font-mono uppercase tracking-widest mb-4">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-            <span>Working Demos &amp; Real Projects</span>
+            <span>Proven Client Deployments</span>
           </div>
 
           <h1 className="font-heading font-bold uppercase tracking-tight text-white leading-[0.95] text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6">
@@ -75,7 +68,7 @@ export default function WorkPage() {
           </h1>
 
           <p className="font-body text-white/80 text-base sm:text-lg md:text-xl leading-relaxed">
-            Explore our custom websites, software prototypes, and practical AI demos to see how we solve real business bottlenecks.
+            Explore our real custom websites and digital platforms built for growing businesses. Click any Live Link to experience the deployed platforms.
           </p>
         </div>
 
@@ -91,7 +84,7 @@ export default function WorkPage() {
                 onClick={() => handleFilterChange(tab.id)}
                 className={`inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-full text-xs font-heading font-semibold uppercase tracking-wider transition-all duration-200 ${
                   isActive
-                    ? 'bg-emerald-500 text-[#07240f] shadow-lg'
+                    ? 'bg-emerald-500 text-[#07240f] shadow-lg font-bold'
                     : 'bg-white/5 text-white/75 hover:text-white hover:bg-white/10 border border-white/10'
                 }`}
               >
@@ -126,7 +119,7 @@ export default function WorkPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#07240f] via-transparent to-transparent opacity-80" />
 
                   {/* Badges Overlay */}
-                  <div className="absolute top-3 left-3 right-3 flex items-center justify-between gap-2">
+                  <div className="absolute top-3 left-3 right-3 flex items-center justify-between gap-2 pointer-events-none">
                     <span className="px-2.5 py-1 rounded-full text-[10px] font-mono uppercase tracking-wider bg-black/70 backdrop-blur-md text-emerald-300 border border-white/15">
                       {project.projectType}
                     </span>
@@ -160,27 +153,25 @@ export default function WorkPage() {
                     </div>
                   </div>
 
-                  {/* Actions */}
-                  <div className="pt-4 border-t border-white/10 flex items-center justify-between gap-2">
+                  {/* Actions: Direct Live Link and Case Study */}
+                  <div className="pt-4 border-t border-white/10 flex items-center justify-between gap-3">
+                    <a
+                      href={project.demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/15 hover:bg-emerald-500 text-emerald-300 hover:text-[#07240f] border border-emerald-500/30 font-heading font-bold text-xs uppercase tracking-wider transition-all duration-200 active:scale-95 shadow-md"
+                    >
+                      <span>Live Link</span>
+                      <ExternalLink className="w-3.5 h-3.5" />
+                    </a>
+
                     <Link
                       to={`/work/${project.slug}`}
-                      className="inline-flex items-center gap-1.5 text-xs font-heading font-semibold uppercase tracking-wider text-white hover:text-emerald-300 transition-colors"
+                      className="inline-flex items-center gap-1.5 text-xs font-heading font-semibold uppercase tracking-wider text-white/70 hover:text-white transition-colors"
                     >
-                      <span>View Case Study</span>
+                      <span>Case Study</span>
                       <ArrowUpRight className="w-3.5 h-3.5" />
                     </Link>
-
-                    {project.demoUrl && (
-                      <a
-                        href={project.demoUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="p-2 rounded-full bg-white/5 hover:bg-white/10 text-white/60 hover:text-white transition-colors"
-                        title="Open Live Preview"
-                      >
-                        <ExternalLink className="w-3.5 h-3.5" />
-                      </a>
-                    )}
                   </div>
                 </div>
               </motion.article>
@@ -194,7 +185,7 @@ export default function WorkPage() {
             Need a Solution Built for Your Specific Workflow?
           </h3>
           <p className="font-body text-white/75 text-sm sm:text-base leading-relaxed mb-6">
-            We build custom websites and AI systems tailored directly around how your business attracts, qualifies, and serves customers.
+            We build custom websites and digital platforms tailored directly around how your business attracts, qualifies, and serves customers.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link

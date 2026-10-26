@@ -8,7 +8,8 @@ import {
   Globe, 
   Bot, 
   Layers,
-  Gauge
+  Gauge,
+  ExternalLink
 } from 'lucide-react';
 import { PROJECTS } from '../data/projects';
 import SEO from '../components/SEO';
@@ -69,6 +70,20 @@ export default function ProjectDetailPage() {
           <p className="font-body text-white/85 text-base sm:text-lg md:text-xl leading-relaxed">
             {project.summary}
           </p>
+
+          {project.demoUrl && (
+            <div className="mt-6">
+              <a
+                href={project.demoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-500 hover:bg-emerald-400 text-[#07240f] font-heading font-bold text-xs uppercase tracking-wider transition-all duration-200 shadow-xl active:scale-95"
+              >
+                <span>Live Link</span>
+                <ExternalLink className="w-4 h-4" />
+              </a>
+            </div>
+          )}
         </div>
 
         {/* Hero Visual Banner */}
@@ -200,6 +215,17 @@ export default function ProjectDetailPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+            {project.demoUrl && (
+              <a
+                href={project.demoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-emerald-500 hover:bg-emerald-400 text-[#07240f] font-heading font-bold text-xs uppercase tracking-wider transition-all shadow-lg active:scale-95"
+              >
+                <span>Live Link</span>
+                <ExternalLink className="w-4 h-4" />
+              </a>
+            )}
             <Link
               to="/contact"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white text-[#0B3215] font-heading font-semibold text-xs uppercase tracking-wider hover:bg-neutral-100 transition-all shadow-lg active:scale-95"
