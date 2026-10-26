@@ -56,8 +56,8 @@ export default function WorkPage() {
   return (
     <>
       <SEO
-        title="Our Work & Live Demos — Websites, Software & AI Systems"
-        description="Explore GrowtivAI's websites, software concepts, and practical AI demos to see how our engineering solutions fix real business bottlenecks."
+        title="Our Work — Websites, Software & Practical AI Systems"
+        description="Explore GrowtivAI's client websites, custom software, and practical AI solutions built for growing businesses."
         canonicalPath="/work"
       />
 
