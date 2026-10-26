@@ -33,7 +33,7 @@ export default function HomePage() {
         {/* Two Core Services Preview */}
         <ServicesSection />
 
-        {/* Selected Work & Live Demos */}
+        {/* Our Work Section */}
         <ProjectsSection />
 
         {/* Business Use Cases Across Indian Industries */}

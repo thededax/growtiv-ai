@@ -65,7 +65,7 @@ export default function FooterSection() {
                 </li>
                 <li>
                   <Link to="/work" className="text-white/75 hover:text-white transition-colors">
-                    Our Work &amp; Demos
+                    Our Work
                   </Link>
                 </li>
                 <li>
