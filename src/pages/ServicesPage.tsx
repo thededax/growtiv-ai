@@ -34,46 +34,46 @@ export default function ServicesPage() {
         canonicalPath="/services"
       />
 
-      <div className="w-full pt-32 sm:pt-36 md:pt-40 pb-20 sm:pb-28">
+      <div className="w-full pt-24 sm:pt-32 md:pt-36 pb-12 sm:pb-24">
         
         {/* ── 1. Page Header & Introduction ─────────────────────────── */}
-        <section className="px-5 sm:px-8 md:px-12 max-w-7xl mx-auto mb-16 sm:mb-24">
+        <section className="px-4 sm:px-8 md:px-12 max-w-7xl mx-auto mb-10 sm:mb-18 md:mb-24">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-emerald-400 text-xs font-mono uppercase tracking-widest mb-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-emerald-400 text-xs font-mono uppercase tracking-widest mb-3.5">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
               <span>Two Core Pillars of Practical Growth</span>
             </div>
 
-            <h1 className="font-heading font-bold uppercase tracking-tight text-white leading-[0.95] text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6">
+            <h1 className="font-heading font-bold uppercase tracking-tight text-white leading-[0.98] sm:leading-[0.95] text-3xl sm:text-5xl md:text-6xl lg:text-7xl mb-4 sm:mb-6">
               Two Ways We Help Your Business Grow.
             </h1>
 
-            <p className="font-body text-white/80 text-base sm:text-lg md:text-xl leading-relaxed">
+            <p className="font-body text-white/80 text-sm sm:text-lg md:text-xl leading-relaxed">
               Build a fast website that turns visitors into genuine enquiries, or deploy smart WhatsApp and voice AI that answers customers and cuts repetitive work. Choose what fits your business today.
             </p>
 
             {/* Quick Service Anchor Navigation Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4 mt-6 sm:mt-10">
               <button
                 type="button"
                 onClick={() => scrollToAnchor('custom-website-software')}
-                className="group p-5 sm:p-6 rounded-2xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/15 hover:border-emerald-400/50 transition-all text-left flex flex-col justify-between"
+                className="group p-4 sm:p-6 rounded-2xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/15 hover:border-emerald-400/50 transition-all text-left flex flex-col justify-between"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center justify-between mb-2 sm:mb-3">
                     <span className="text-xs font-mono text-emerald-300 uppercase tracking-widest font-semibold">
                       Service 01
                     </span>
                     <ArrowDown className="w-4 h-4 text-white/40 group-hover:text-emerald-400 group-hover:translate-y-0.5 transition-all" />
                   </div>
-                  <h2 className="font-heading font-bold text-lg sm:text-xl uppercase text-white mb-1.5">
+                  <h2 className="font-heading font-bold text-base sm:text-xl uppercase text-white mb-1">
                     Custom Website &amp; Software Development
                   </h2>
                   <p className="font-body text-xs sm:text-sm text-white/70 leading-relaxed">
                     Fast, high-converting websites and tailored internal software designed around your workflows.
                   </p>
                 </div>
-                <div className="mt-4 flex items-center gap-1.5 text-xs font-mono uppercase tracking-wider text-emerald-400 font-medium">
+                <div className="mt-3 sm:mt-4 flex items-center gap-1.5 text-xs font-mono uppercase tracking-wider text-emerald-400 font-medium">
                   <span>Jump to Section</span>
                   <span>↓</span>
                 </div>
@@ -82,23 +82,23 @@ export default function ServicesPage() {
               <button
                 type="button"
                 onClick={() => scrollToAnchor('ai-systems')}
-                className="group p-5 sm:p-6 rounded-2xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/15 hover:border-emerald-400/50 transition-all text-left flex flex-col justify-between"
+                className="group p-4 sm:p-6 rounded-2xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/15 hover:border-emerald-400/50 transition-all text-left flex flex-col justify-between"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center justify-between mb-2 sm:mb-3">
                     <span className="text-xs font-mono text-emerald-300 uppercase tracking-widest font-semibold">
                       Service 02
                     </span>
                     <ArrowDown className="w-4 h-4 text-white/40 group-hover:text-emerald-400 group-hover:translate-y-0.5 transition-all" />
                   </div>
-                  <h2 className="font-heading font-bold text-lg sm:text-xl uppercase text-white mb-1.5">
+                  <h2 className="font-heading font-bold text-base sm:text-xl uppercase text-white mb-1">
                     AI Systems &amp; Automation
                   </h2>
                   <p className="font-body text-xs sm:text-sm text-white/70 leading-relaxed">
                     WhatsApp concierges, voice agents, and workflow automations that answer customers 24/7.
                   </p>
                 </div>
-                <div className="mt-4 flex items-center gap-1.5 text-xs font-mono uppercase tracking-wider text-emerald-400 font-medium">
+                <div className="mt-3 sm:mt-4 flex items-center gap-1.5 text-xs font-mono uppercase tracking-wider text-emerald-400 font-medium">
                   <span>Jump to Section</span>
                   <span>↓</span>
                 </div>
@@ -110,67 +110,67 @@ export default function ServicesPage() {
         {/* ── 2. SERVICE ONE: Custom Website & Software Development ───── */}
         <section
           id="custom-website-software"
-          className="scroll-mt-28 px-5 sm:px-8 md:px-12 max-w-7xl mx-auto mb-24 sm:mb-32"
+          className="scroll-mt-24 sm:scroll-mt-28 px-4 sm:px-8 md:px-12 max-w-7xl mx-auto mb-14 sm:mb-24 md:mb-32"
         >
-          <div className="rounded-[32px] sm:rounded-[44px] bg-[#07240f] border border-white/15 p-6 sm:p-10 md:p-14 shadow-2xl relative overflow-hidden">
+          <div className="rounded-[24px] sm:rounded-[36px] md:rounded-[44px] bg-[#07240f] border border-white/15 p-4 sm:p-8 md:p-14 shadow-2xl relative overflow-hidden">
             
             {/* Header */}
-            <div className="max-w-3xl mb-12">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-xs font-mono uppercase tracking-widest mb-4">
+            <div className="max-w-3xl mb-8 sm:mb-12">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-xs font-mono uppercase tracking-widest mb-3 sm:mb-4">
                 <Globe className="w-3.5 h-3.5 text-emerald-400" />
                 <span>Service 01 • Web &amp; Software Engine</span>
               </div>
 
-              <h2 className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl uppercase tracking-tight text-white mb-4">
+              <h2 className="font-heading font-bold text-2xl sm:text-4xl md:text-5xl uppercase tracking-tight text-white mb-3 sm:mb-4">
                 Websites That Make Customers Enquire.
               </h2>
 
-              <p className="font-body text-white/80 text-base sm:text-lg leading-relaxed">
+              <p className="font-body text-white/80 text-sm sm:text-lg leading-relaxed">
                 Your business isn’t generic. Your website or software should be built around how your customers actually decide, how your team operates, and what brings you real revenue.
               </p>
             </div>
 
             {/* Plain English Explanation */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-              <div className="p-6 sm:p-7 rounded-2xl bg-white/[0.03] border border-white/10">
-                <div className="flex items-center gap-3 mb-3">
-                  <Layout className="w-5 h-5 text-emerald-400" />
-                  <h3 className="font-heading font-bold text-lg uppercase text-white">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-8 sm:mb-12">
+              <div className="p-4 sm:p-7 rounded-2xl bg-white/[0.03] border border-white/10">
+                <div className="flex items-center gap-2.5 mb-2.5 sm:mb-3">
+                  <Layout className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400" />
+                  <h3 className="font-heading font-bold text-base sm:text-lg uppercase text-white">
                     What Custom Website Development Means
                   </h3>
                 </div>
-                <p className="font-body text-sm sm:text-base text-white/75 leading-relaxed">
+                <p className="font-body text-xs sm:text-base text-white/75 leading-relaxed">
                   Building a fast, professional online presence designed to turn curious visitors into paying customers. Rather than a static digital brochure, your website clearly explains what you do, shows proof of work, and makes reaching out on WhatsApp or form effortless.
                 </p>
               </div>
 
-              <div className="p-6 sm:p-7 rounded-2xl bg-white/[0.03] border border-white/10">
-                <div className="flex items-center gap-3 mb-3">
-                  <Database className="w-5 h-5 text-emerald-400" />
-                  <h3 className="font-heading font-bold text-lg uppercase text-white">
+              <div className="p-4 sm:p-7 rounded-2xl bg-white/[0.03] border border-white/10">
+                <div className="flex items-center gap-2.5 mb-2.5 sm:mb-3">
+                  <Database className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400" />
+                  <h3 className="font-heading font-bold text-base sm:text-lg uppercase text-white">
                     What Custom Software Development Means
                   </h3>
                 </div>
-                <p className="font-body text-sm sm:text-base text-white/75 leading-relaxed">
+                <p className="font-body text-xs sm:text-base text-white/75 leading-relaxed">
                   Creating a simple, private digital tool for a specific business task—such as tracking leads, managing clinic appointments, or generating banquet quotes—so your team stops juggling handwritten diaries, separate spreadsheets, and personal chats.
                 </p>
               </div>
             </div>
 
             {/* What Can We Build? */}
-            <div className="mb-12">
-              <p className="text-xs font-mono uppercase tracking-widest text-emerald-400 font-semibold mb-4">
+            <div className="mb-8 sm:mb-12">
+              <p className="text-xs font-mono uppercase tracking-widest text-emerald-400 font-semibold mb-3.5">
                 Available Solution Categories
               </p>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                 {/* Business Websites */}
-                <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10">
-                  <h4 className="font-heading font-bold text-lg uppercase text-white mb-3 flex items-center gap-2">
+                <div className="p-4 sm:p-6 rounded-2xl bg-white/[0.02] border border-white/10">
+                  <h4 className="font-heading font-bold text-base sm:text-lg uppercase text-white mb-2.5 sm:mb-3 flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-emerald-400" />
                     Business Websites
                   </h4>
-                  <ul className="space-y-2.5 text-xs sm:text-sm text-white/80 font-body">
+                  <ul className="space-y-2 sm:space-y-2.5 text-xs sm:text-sm text-white/80 font-body">
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                       <span><strong>Credibility Websites:</strong> Fast, clean company portals that explain your offerings simply and establish immediate trust.</span>
@@ -191,12 +191,12 @@ export default function ServicesPage() {
                 </div>
 
                 {/* Custom Business Software */}
-                <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10">
-                  <h4 className="font-heading font-bold text-lg uppercase text-white mb-3 flex items-center gap-2">
+                <div className="p-4 sm:p-6 rounded-2xl bg-white/[0.02] border border-white/10">
+                  <h4 className="font-heading font-bold text-base sm:text-lg uppercase text-white mb-2.5 sm:mb-3 flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-emerald-400" />
                     Custom Business Software
                   </h4>
-                  <ul className="space-y-2.5 text-xs sm:text-sm text-white/80 font-body">
+                  <ul className="space-y-2 sm:space-y-2.5 text-xs sm:text-sm text-white/80 font-body">
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                       <span><strong>Internal Operations Dashboards:</strong> Centralized views of daily bookings, project milestones, and client requests.</span>
@@ -219,12 +219,12 @@ export default function ServicesPage() {
             </div>
 
             {/* How Does It Work? (4 Steps) */}
-            <div className="mb-12">
-              <p className="text-xs font-mono uppercase tracking-widest text-emerald-400 font-semibold mb-4">
+            <div className="mb-8 sm:mb-12">
+              <p className="text-xs font-mono uppercase tracking-widest text-emerald-400 font-semibold mb-3.5">
                 Our 4-Step Engineering Process
               </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
                 {[
                   {
                     step: '01',
@@ -247,11 +247,11 @@ export default function ServicesPage() {
                     desc: 'We test performance across mobile devices, fix identified issues, and provide complete handover and staff training.',
                   },
                 ].map((item) => (
-                  <div key={item.step} className="p-5 rounded-2xl bg-white/[0.03] border border-white/10">
-                    <span className="font-heading font-bold text-2xl text-emerald-400 block mb-2">
+                  <div key={item.step} className="p-4 sm:p-5 rounded-2xl bg-white/[0.03] border border-white/10">
+                    <span className="font-heading font-bold text-xl sm:text-2xl text-emerald-400 block mb-1.5 sm:mb-2">
                       {item.step}
                     </span>
-                    <h5 className="font-heading font-bold text-sm uppercase text-white mb-1.5">
+                    <h5 className="font-heading font-bold text-xs sm:text-sm uppercase text-white mb-1 sm:mb-1.5">
                       {item.title}
                     </h5>
                     <p className="font-body text-xs text-white/70 leading-relaxed">
@@ -263,12 +263,12 @@ export default function ServicesPage() {
             </div>
 
             {/* Business Value */}
-            <div className="mb-10 p-6 rounded-2xl bg-emerald-950/40 border border-emerald-500/20">
-              <h4 className="font-heading font-bold text-base uppercase text-emerald-300 mb-3 flex items-center gap-2">
+            <div className="mb-6 sm:mb-10 p-4 sm:p-6 rounded-2xl bg-emerald-950/40 border border-emerald-500/20">
+              <h4 className="font-heading font-bold text-sm sm:text-base uppercase text-emerald-300 mb-2.5 sm:mb-3 flex items-center gap-2">
                 <Sparkles className="w-4 h-4" />
                 Practical Business Value
               </h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-xs sm:text-sm text-white/80 font-body">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5 sm:gap-3 text-xs sm:text-sm text-white/80 font-body">
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
                   <span>Present your business with modern credibility</span>
@@ -297,17 +297,17 @@ export default function ServicesPage() {
             </div>
 
             {/* Section CTAs */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-6 border-t border-white/10">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3 pt-5 sm:pt-6 border-t border-white/10">
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white text-[#0B3215] font-heading font-semibold text-xs uppercase tracking-wider hover:bg-neutral-100 transition-all shadow-lg active:scale-95 text-center"
+                className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-white text-[#0B3215] font-heading font-semibold text-xs uppercase tracking-wider hover:bg-neutral-100 transition-all shadow-lg active:scale-95 text-center"
               >
                 <span>Discuss Your Project</span>
                 <ArrowRight className="w-4 h-4 text-[#0B3215]" />
               </Link>
               <Link
                 to="/work"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white/10 hover:bg-white/15 border border-white/20 text-white font-heading font-semibold text-xs uppercase tracking-wider transition-all active:scale-95 text-center"
+                className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-white/10 hover:bg-white/15 border border-white/20 text-white font-heading font-semibold text-xs uppercase tracking-wider transition-all active:scale-95 text-center"
               >
                 <span>View Our Work</span>
               </Link>
@@ -319,32 +319,32 @@ export default function ServicesPage() {
         {/* ── 3. SERVICE TWO: AI Systems ────────────────────────────── */}
         <section
           id="ai-systems"
-          className="scroll-mt-28 px-5 sm:px-8 md:px-12 max-w-7xl mx-auto mb-24 sm:mb-32"
+          className="scroll-mt-24 sm:scroll-mt-28 px-4 sm:px-8 md:px-12 max-w-7xl mx-auto mb-14 sm:mb-24 md:mb-32"
         >
-          <div className="rounded-[32px] sm:rounded-[44px] bg-[#07240f] border border-white/15 p-6 sm:p-10 md:p-14 shadow-2xl relative overflow-hidden">
+          <div className="rounded-[24px] sm:rounded-[36px] md:rounded-[44px] bg-[#07240f] border border-white/15 p-4 sm:p-8 md:p-14 shadow-2xl relative overflow-hidden">
             
             {/* Header */}
-            <div className="max-w-3xl mb-12">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-xs font-mono uppercase tracking-widest mb-4">
+            <div className="max-w-3xl mb-8 sm:mb-12">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-xs font-mono uppercase tracking-widest mb-3 sm:mb-4">
                 <Bot className="w-3.5 h-3.5 text-emerald-400" />
                 <span>Service 02 • Practical AI Systems</span>
               </div>
 
-              <h2 className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl uppercase tracking-tight text-white mb-4">
+              <h2 className="font-heading font-bold text-2xl sm:text-4xl md:text-5xl uppercase tracking-tight text-white mb-3 sm:mb-4">
                 AI Systems That Handle Customer Communication.
               </h2>
 
-              <p className="font-body text-white/80 text-base sm:text-lg leading-relaxed">
+              <p className="font-body text-white/80 text-sm sm:text-lg leading-relaxed">
                 Practical WhatsApp assistants, voice agents, and background automations that answer customer questions in seconds, log leads, and keep your business running when you’re busy or closed.
               </p>
             </div>
 
             {/* What are AI Systems? Plain English */}
-            <div className="p-6 sm:p-8 rounded-2xl bg-white/[0.03] border border-white/10 mb-12">
-              <h3 className="font-heading font-bold text-xl uppercase text-white mb-3">
+            <div className="p-4 sm:p-8 rounded-2xl bg-white/[0.03] border border-white/10 mb-8 sm:mb-12">
+              <h3 className="font-heading font-bold text-lg sm:text-xl uppercase text-white mb-2 sm:mb-3">
                 What are AI Systems? (In Plain English)
               </h3>
-              <p className="font-body text-sm sm:text-base text-white/80 leading-relaxed mb-4">
+              <p className="font-body text-xs sm:text-base text-white/80 leading-relaxed mb-3 sm:mb-4">
                 An AI system is a digital assistant configured to handle specific, repetitive communication tasks. It can answer customer questions on WhatsApp within 30 seconds, share catalog PDFs, verify buyer budgets, or alert your sales team when a high-value lead arrives.
               </p>
               <p className="font-body text-xs sm:text-sm text-emerald-300/90 leading-relaxed">
@@ -353,26 +353,26 @@ export default function ServicesPage() {
             </div>
 
             {/* Three Capabilities Within AI Systems */}
-            <div className="mb-12">
-              <p className="text-xs font-mono uppercase tracking-widest text-emerald-400 font-semibold mb-4">
+            <div className="mb-8 sm:mb-12">
+              <p className="text-xs font-mono uppercase tracking-widest text-emerald-400 font-semibold mb-3.5">
                 Three Core Capabilities Within AI Systems
               </p>
 
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
                 
                 {/* Capability 1: Voice Agents */}
-                <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10 flex flex-col justify-between">
+                <div className="p-4 sm:p-6 rounded-2xl bg-white/[0.02] border border-white/10 flex flex-col justify-between">
                   <div>
-                    <div className="w-10 h-10 rounded-xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-4">
-                      <PhoneCall className="w-5 h-5" />
+                    <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-3 sm:mb-4">
+                      <PhoneCall className="w-4 h-4 sm:w-5 sm:h-5" />
                     </div>
                     <span className="text-xs font-mono text-emerald-400 uppercase tracking-widest font-semibold block mb-1">
                       Capability 01
                     </span>
-                    <h4 className="font-heading font-bold text-lg uppercase text-white mb-3">
+                    <h4 className="font-heading font-bold text-base sm:text-lg uppercase text-white mb-2 sm:mb-3">
                       AI Voice Agents
                     </h4>
-                    <p className="font-body text-xs sm:text-sm text-white/75 leading-relaxed mb-4">
+                    <p className="font-body text-xs sm:text-sm text-white/75 leading-relaxed mb-3 sm:mb-4">
                       Configured phone assistants that answer routine calls, answer standard questions, collect caller details, and route priority inquiries to your staff.
                     </p>
                   </div>
@@ -382,18 +382,18 @@ export default function ServicesPage() {
                 </div>
 
                 {/* Capability 2: WhatsApp Agents */}
-                <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10 flex flex-col justify-between">
+                <div className="p-4 sm:p-6 rounded-2xl bg-white/[0.02] border border-white/10 flex flex-col justify-between">
                   <div>
-                    <div className="w-10 h-10 rounded-xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-4">
-                      <MessageSquare className="w-5 h-5" />
+                    <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-3 sm:mb-4">
+                      <MessageSquare className="w-4 h-4 sm:w-5 sm:h-5" />
                     </div>
                     <span className="text-xs font-mono text-emerald-400 uppercase tracking-widest font-semibold block mb-1">
                       Capability 02
                     </span>
-                    <h4 className="font-heading font-bold text-lg uppercase text-white mb-3">
+                    <h4 className="font-heading font-bold text-base sm:text-lg uppercase text-white mb-2 sm:mb-3">
                       AI WhatsApp Agents
                     </h4>
-                    <p className="font-body text-xs sm:text-sm text-white/75 leading-relaxed mb-4">
+                    <p className="font-body text-xs sm:text-sm text-white/75 leading-relaxed mb-3 sm:mb-4">
                       Official WhatsApp Cloud API assistants that greet leads, share approved brochures, qualify budgets, and book appointments 24/7.
                     </p>
                   </div>
@@ -403,18 +403,18 @@ export default function ServicesPage() {
                 </div>
 
                 {/* Capability 3: Custom AI Automations */}
-                <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10 flex flex-col justify-between">
+                <div className="p-4 sm:p-6 rounded-2xl bg-white/[0.02] border border-white/10 flex flex-col justify-between">
                   <div>
-                    <div className="w-10 h-10 rounded-xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-4">
-                      <Workflow className="w-5 h-5" />
+                    <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-3 sm:mb-4">
+                      <Workflow className="w-4 h-4 sm:w-5 sm:h-5" />
                     </div>
                     <span className="text-xs font-mono text-emerald-400 uppercase tracking-widest font-semibold block mb-1">
                       Capability 03
                     </span>
-                    <h4 className="font-heading font-bold text-lg uppercase text-white mb-3">
+                    <h4 className="font-heading font-bold text-base sm:text-lg uppercase text-white mb-2 sm:mb-3">
                       Custom AI Automations
                     </h4>
-                    <p className="font-body text-xs sm:text-sm text-white/75 leading-relaxed mb-4">
+                    <p className="font-body text-xs sm:text-sm text-white/75 leading-relaxed mb-3 sm:mb-4">
                       Automated connections linking WhatsApp, Google Sheets, CRMs (Zoho/LeadSquared), and payment alerts with zero manual typing.
                     </p>
                   </div>
@@ -427,12 +427,12 @@ export default function ServicesPage() {
             </div>
 
             {/* How Does It Work? (4 Steps) */}
-            <div className="mb-12">
-              <p className="text-xs font-mono uppercase tracking-widest text-emerald-400 font-semibold mb-4">
+            <div className="mb-8 sm:mb-12">
+              <p className="text-xs font-mono uppercase tracking-widest text-emerald-400 font-semibold mb-3.5">
                 Our 4-Step Implementation Process
               </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
                 {[
                   {
                     step: '01',
@@ -455,11 +455,11 @@ export default function ServicesPage() {
                     desc: 'We test realistic customer scenarios, verify guardrails, and train your staff before going live.',
                   },
                 ].map((item) => (
-                  <div key={item.step} className="p-5 rounded-2xl bg-white/[0.03] border border-white/10">
-                    <span className="font-heading font-bold text-2xl text-emerald-400 block mb-2">
+                  <div key={item.step} className="p-4 sm:p-5 rounded-2xl bg-white/[0.03] border border-white/10">
+                    <span className="font-heading font-bold text-xl sm:text-2xl text-emerald-400 block mb-1.5 sm:mb-2">
                       {item.step}
                     </span>
-                    <h5 className="font-heading font-bold text-sm uppercase text-white mb-1.5">
+                    <h5 className="font-heading font-bold text-xs sm:text-sm uppercase text-white mb-1 sm:mb-1.5">
                       {item.title}
                     </h5>
                     <p className="font-body text-xs text-white/70 leading-relaxed">
@@ -471,12 +471,12 @@ export default function ServicesPage() {
             </div>
 
             {/* Business Value */}
-            <div className="mb-10 p-6 rounded-2xl bg-emerald-950/40 border border-emerald-500/20">
-              <h4 className="font-heading font-bold text-base uppercase text-emerald-300 mb-3 flex items-center gap-2">
+            <div className="mb-6 sm:mb-10 p-4 sm:p-6 rounded-2xl bg-emerald-950/40 border border-emerald-500/20">
+              <h4 className="font-heading font-bold text-sm sm:text-base uppercase text-emerald-300 mb-2.5 sm:mb-3 flex items-center gap-2">
                 <Sparkles className="w-4 h-4" />
                 Practical Business Value
               </h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-xs sm:text-sm text-white/80 font-body">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5 sm:gap-3 text-xs sm:text-sm text-white/80 font-body">
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
                   <span>Replies to customer inquiries in under 30 seconds</span>
@@ -505,17 +505,17 @@ export default function ServicesPage() {
             </div>
 
             {/* Section CTAs */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-6 border-t border-white/10">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3 pt-5 sm:pt-6 border-t border-white/10">
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white text-[#0B3215] font-heading font-semibold text-xs uppercase tracking-wider hover:bg-neutral-100 transition-all shadow-lg active:scale-95 text-center"
+                className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-white text-[#0B3215] font-heading font-semibold text-xs uppercase tracking-wider hover:bg-neutral-100 transition-all shadow-lg active:scale-95 text-center"
               >
                 <span>Discuss an AI System</span>
                 <ArrowRight className="w-4 h-4 text-[#0B3215]" />
               </Link>
               <Link
                 to="/work?category=ai-systems"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white/10 hover:bg-white/15 border border-white/20 text-white font-heading font-semibold text-xs uppercase tracking-wider transition-all active:scale-95 text-center"
+                className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-white/10 hover:bg-white/15 border border-white/20 text-white font-heading font-semibold text-xs uppercase tracking-wider transition-all active:scale-95 text-center"
               >
                 <span>Explore AI Demos</span>
               </Link>
@@ -525,20 +525,20 @@ export default function ServicesPage() {
         </section>
 
         {/* ── 4. Closing CTA Section ─────────────────────────────────── */}
-        <section className="px-5 sm:px-8 md:px-12 max-w-7xl mx-auto">
-          <div className="rounded-[32px] sm:rounded-[44px] bg-gradient-to-b from-white/[0.08] to-white/[0.03] border border-white/20 p-8 sm:p-12 md:p-16 text-center max-w-4xl mx-auto shadow-2xl">
-            <h3 className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl uppercase tracking-tight text-white mb-4">
+        <section className="px-4 sm:px-8 md:px-12 max-w-7xl mx-auto">
+          <div className="rounded-[24px] sm:rounded-[36px] md:rounded-[44px] bg-gradient-to-b from-white/[0.08] to-white/[0.03] border border-white/20 p-5 sm:p-10 md:p-16 text-center max-w-4xl mx-auto shadow-2xl">
+            <h3 className="font-heading font-bold text-2xl sm:text-4xl md:text-5xl uppercase tracking-tight text-white mb-3 sm:mb-4">
               Let&rsquo;s Build the Right Solution for Your Business.
             </h3>
-            <p className="font-body text-white/80 text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
+            <p className="font-body text-white/80 text-xs sm:text-base md:text-lg max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed">
               Tell us what is costing your business the most time or money right now. We’ll help you choose the right starting point, whether that’s a custom website, internal software, a WhatsApp AI assistant, or a unified system.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
               <Magnet padding={40} strength={3}>
                 <Link
                   to="/contact"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white text-[#0B3215] font-heading font-bold text-xs sm:text-sm uppercase tracking-wider hover:bg-neutral-100 transition-all shadow-xl active:scale-95 text-center"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-white text-[#0B3215] font-heading font-bold text-xs sm:text-sm uppercase tracking-wider hover:bg-neutral-100 transition-all shadow-xl active:scale-95 text-center"
                 >
                   <PhoneCall className="w-4 h-4 text-[#0B3215]" />
                   <span>Book a Discovery Call</span>
@@ -550,7 +550,7 @@ export default function ServicesPage() {
                   href={getWhatsAppUrl()}
                   target="_blank"
                   rel="noreferrer"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-heading font-bold text-xs sm:text-sm uppercase tracking-wider transition-all shadow-xl active:scale-95 text-center"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-heading font-bold text-xs sm:text-sm uppercase tracking-wider transition-all shadow-xl active:scale-95 text-center"
                 >
                   <MessageSquare className="w-4 h-4 text-emerald-200" />
                   <span>Chat on WhatsApp</span>

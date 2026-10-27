@@ -112,7 +112,7 @@ export default function HowItWorksTimeline() {
   });
 
   return (
-    <div ref={containerRef} className="relative w-full max-w-6xl mx-auto py-10 sm:py-16">
+    <div ref={containerRef} className="relative w-full max-w-6xl mx-auto py-6 sm:py-16">
       {/* Central Progress Track Line (Desktop) */}
       <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-12 bottom-12 w-0.5 bg-[#0B3215]/10">
         <motion.div
@@ -122,7 +122,7 @@ export default function HowItWorksTimeline() {
       </div>
 
       {/* Mobile Side Progress Track Line */}
-      <div className="md:hidden absolute left-6 top-8 bottom-8 w-0.5 bg-[#0B3215]/10">
+      <div className="md:hidden absolute left-4 sm:left-6 top-6 bottom-6 w-0.5 bg-[#0B3215]/10">
         <motion.div
           className="w-full bg-gradient-to-b from-emerald-500 via-emerald-400 to-emerald-600 origin-top shadow-[0_0_12px_rgba(34,197,94,0.6)]"
           style={{ scaleY, height: '100%' }}
@@ -130,7 +130,7 @@ export default function HowItWorksTimeline() {
       </div>
 
       {/* Timeline Steps List */}
-      <div className="flex flex-col gap-12 sm:gap-20 md:gap-28 relative">
+      <div className="flex flex-col gap-6 sm:gap-14 md:gap-28 relative">
         {STEPS.map((step, index) => {
           const isEven = index % 2 === 0;
           const Icon = step.icon;
@@ -138,19 +138,19 @@ export default function HowItWorksTimeline() {
           return (
             <div
               key={step.number}
-              className={`relative flex flex-col md:flex-row items-center gap-6 sm:gap-10 md:gap-14 ${
+              className={`relative flex flex-col md:flex-row items-center gap-4 sm:gap-10 md:gap-14 ${
                 isEven ? 'md:flex-row' : 'md:flex-row-reverse'
               }`}
             >
               {/* Timeline Center Node Badge */}
-              <div className="absolute left-6 md:left-1/2 -translate-x-1/2 z-20 flex items-center justify-center">
+              <div className="absolute left-4 sm:left-6 md:left-1/2 -translate-x-1/2 z-20 flex items-center justify-center">
                 <div className="relative flex items-center justify-center">
                   {/* Pulsing halo ring */}
-                  <span className="absolute -inset-2.5 rounded-full bg-emerald-500/20 animate-ping opacity-60 pointer-events-none" />
-                  <span className="absolute -inset-1 rounded-full bg-emerald-400/40 blur-sm pointer-events-none" />
+                  <span className="absolute -inset-2 rounded-full bg-emerald-500/20 animate-ping opacity-60 pointer-events-none" />
+                  <span className="absolute -inset-0.5 rounded-full bg-emerald-400/40 blur-sm pointer-events-none" />
                   
                   {/* Center Node Button */}
-                  <div className="relative w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-[#0B3215] border-2 border-emerald-400 text-white font-mono font-bold text-xs sm:text-sm flex items-center justify-center shadow-[0_0_20px_rgba(34,197,94,0.4)]">
+                  <div className="relative w-8 h-8 sm:w-11 sm:h-11 rounded-full bg-[#0B3215] border-2 border-emerald-400 text-white font-mono font-bold text-[11px] sm:text-xs flex items-center justify-center shadow-[0_0_16px_rgba(34,197,94,0.4)]">
                     {step.number}
                   </div>
                 </div>
@@ -162,40 +162,40 @@ export default function HowItWorksTimeline() {
                 whileInView={{ opacity: 1, x: 0, y: 0 }}
                 viewport={{ once: true, margin: '-60px' }}
                 transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
-                className={`w-full md:w-1/2 pl-14 sm:pl-16 md:pl-0 ${
+                className={`w-full md:w-1/2 pl-10 sm:pl-16 md:pl-0 ${
                   isEven ? 'md:pr-12 md:text-right' : 'md:pl-12 md:text-left'
                 }`}
               >
                 {/* Phase & Duration Tag */}
                 <div
-                  className={`inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0B3215]/[0.06] border border-[#0B3215]/10 text-xs font-mono font-semibold uppercase tracking-wider text-[#0B3215] mb-3 ${
+                  className={`inline-flex items-center gap-1.5 sm:gap-2 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-[#0B3215]/[0.06] border border-[#0B3215]/10 text-[10px] sm:text-xs font-mono font-semibold uppercase tracking-wider text-[#0B3215] mb-2 sm:mb-3 ${
                     isEven ? 'md:ml-auto' : ''
                   }`}
                 >
-                  <Icon className="w-3.5 h-3.5 text-emerald-600" />
+                  <Icon className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-emerald-600" />
                   <span>{step.phase}</span>
                   <span className="text-[#0B3215]/40">•</span>
                   <span className="text-emerald-700 font-bold">{step.duration}</span>
                 </div>
 
-                <h3 className="font-heading font-bold text-xl sm:text-2xl md:text-3xl text-[#0B3215] uppercase tracking-tight mb-3">
+                <h3 className="font-heading font-bold text-base sm:text-2xl md:text-3xl text-[#0B3215] uppercase tracking-tight mb-2 sm:mb-3">
                   {step.title}
                 </h3>
 
-                <p className="font-body text-[#0B3215]/75 text-sm sm:text-base leading-relaxed mb-5 max-w-xl">
+                <p className="font-body text-[#0B3215]/75 text-xs sm:text-base leading-relaxed mb-3 sm:mb-5 max-w-xl">
                   {step.description}
                 </p>
 
                 {/* Key Deliverables Chips */}
                 <div
-                  className={`flex flex-wrap gap-2 ${
+                  className={`flex flex-wrap gap-1.5 sm:gap-2 ${
                     isEven ? 'md:justify-end' : 'md:justify-start'
                   }`}
                 >
                   {step.deliverables.map((item) => (
                     <span
                       key={item}
-                      className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-[#0B3215]/12 text-[11px] sm:text-xs font-body font-medium text-[#0B3215] shadow-xs"
+                      className="inline-flex items-center gap-1.5 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-white border border-[#0B3215]/12 text-[10px] sm:text-xs font-body font-medium text-[#0B3215] shadow-xs"
                     >
                       <CheckCircle2 className="w-3 h-3 text-emerald-600 shrink-0" />
                       <span>{item}</span>
@@ -210,37 +210,37 @@ export default function HowItWorksTimeline() {
                 whileInView={{ opacity: 1, x: 0, y: 0 }}
                 viewport={{ once: true, margin: '-60px' }}
                 transition={{ duration: 0.75, delay: 0.1, ease: [0.25, 0.1, 0.25, 1] }}
-                className={`w-full md:w-1/2 pl-14 sm:pl-16 md:pl-0 ${
+                className={`w-full md:w-1/2 pl-10 sm:pl-16 md:pl-0 mt-1 md:mt-0 ${
                   isEven ? 'md:pl-12' : 'md:pr-12'
                 }`}
               >
                 {/* Pulsing Card Container */}
                 <div className="relative group">
                   {/* Continuous ambient pulsing glow aura behind image card */}
-                  <div className="absolute -inset-1.5 rounded-3xl bg-gradient-to-r from-emerald-500/20 via-emerald-400/10 to-teal-500/20 blur-xl opacity-60 group-hover:opacity-100 group-hover:blur-2xl transition-all duration-700 pointer-events-none animate-pulse" />
+                  <div className="absolute -inset-1 rounded-2xl sm:rounded-3xl bg-gradient-to-r from-emerald-500/20 via-emerald-400/10 to-teal-500/20 blur-lg sm:blur-xl opacity-60 group-hover:opacity-100 transition-all duration-700 pointer-events-none animate-pulse" />
 
                   <SpotlightCard
                     spotlightColor="rgba(34, 197, 94, 0.25)"
                     size={420}
-                    className="relative rounded-2xl sm:rounded-3xl bg-[#0B3215] text-white p-2 sm:p-2.5 border border-white/10 shadow-[0_16px_40px_-15px_rgba(11,50,21,0.5)] overflow-hidden transition-all duration-500 group-hover:border-emerald-500/40 group-hover:translate-y-[-2px]"
+                    className="relative rounded-xl sm:rounded-3xl bg-[#0B3215] text-white p-1.5 sm:p-2.5 border border-white/10 shadow-[0_16px_40px_-15px_rgba(11,50,21,0.5)] overflow-hidden transition-all duration-500 group-hover:border-emerald-500/40 group-hover:translate-y-[-2px]"
                   >
                     {/* Top status bar inside card */}
-                    <div className="flex items-center justify-between px-3.5 py-2.5 mb-1.5 border-b border-white/10">
-                      <div className="flex items-center gap-2">
-                        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-                        <span className="text-[11px] font-mono uppercase tracking-widest text-emerald-300">
+                    <div className="flex items-center justify-between px-2.5 sm:px-3.5 py-1.5 sm:py-2.5 mb-1 sm:mb-1.5 border-b border-white/10">
+                      <div className="flex items-center gap-1.5 sm:gap-2">
+                        <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-400 animate-ping" />
+                        <span className="text-[10px] sm:text-[11px] font-mono uppercase tracking-widest text-emerald-300">
                           {step.badge}
                         </span>
                       </div>
-                      <div className="flex items-center gap-1.5 text-[11px] font-mono text-white/60">
-                        <Activity className="w-3 h-3 text-emerald-400 animate-pulse" />
+                      <div className="flex items-center gap-1 sm:gap-1.5 text-[10px] sm:text-[11px] font-mono text-white/60">
+                        <Activity className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-emerald-400 animate-pulse" />
                         <span>{step.stats.label}:</span>
                         <span className="text-white font-semibold">{step.stats.value}</span>
                       </div>
                     </div>
 
                     {/* Image with subtle zoom & cinematic treatment */}
-                    <div className="relative h-48 sm:h-56 md:h-60 w-full rounded-xl sm:rounded-2xl overflow-hidden">
+                    <div className="relative h-32 sm:h-48 md:h-60 w-full rounded-lg sm:rounded-2xl overflow-hidden">
                       <img
                         src={step.image}
                         alt={step.title}
@@ -250,14 +250,14 @@ export default function HowItWorksTimeline() {
                       <div className="absolute inset-0 bg-gradient-to-t from-[#0B3215]/90 via-transparent to-black/20" />
 
                       {/* Floating bottom pill on image */}
-                      <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between p-2.5 rounded-xl bg-[#0B3215]/85 backdrop-blur-md border border-white/15">
-                        <div className="flex items-center gap-2">
-                          <Zap className="w-4 h-4 text-emerald-400" />
-                          <span className="text-xs font-heading font-medium text-white tracking-wide">
+                      <div className="absolute bottom-2 left-2 right-2 sm:bottom-3 sm:left-3 sm:right-3 flex items-center justify-between p-1.5 sm:p-2.5 rounded-lg sm:rounded-xl bg-[#0B3215]/85 backdrop-blur-md border border-white/15">
+                        <div className="flex items-center gap-1.5 sm:gap-2">
+                          <Zap className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-400" />
+                          <span className="text-[11px] sm:text-xs font-heading font-medium text-white tracking-wide">
                             Milestone Verification
                           </span>
                         </div>
-                        <span className="text-[10px] font-mono uppercase tracking-widest text-emerald-300 bg-white/10 px-2 py-0.5 rounded-md">
+                        <span className="text-[9px] sm:text-[10px] font-mono uppercase tracking-widest text-emerald-300 bg-white/10 px-1.5 py-0.5 rounded">
                           Phase {step.number}
                         </span>
                       </div>
@@ -276,30 +276,30 @@ export default function HowItWorksTimeline() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-50px' }}
         transition={{ duration: 0.7 }}
-        className="mt-16 sm:mt-24 text-center"
+        className="mt-8 sm:mt-24 text-center"
       >
         <SpotlightCard
           spotlightColor="rgba(34, 197, 94, 0.15)"
           size={500}
-          className="p-8 sm:p-12 rounded-3xl bg-[#0B3215] text-white border border-white/10 shadow-2xl max-w-3xl mx-auto flex flex-col items-center gap-6"
+          className="p-5 sm:p-12 rounded-2xl sm:rounded-3xl bg-[#0B3215] text-white border border-white/10 shadow-2xl max-w-3xl mx-auto flex flex-col items-center gap-3.5 sm:gap-6"
         >
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-xs font-mono uppercase tracking-widest">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-[10px] sm:text-xs font-mono uppercase tracking-widest">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
             <span>Clear Milestones • Zero Surprise Fees</span>
           </div>
 
-          <h3 className="font-heading font-bold text-2xl sm:text-3xl md:text-4xl uppercase tracking-tight max-w-xl">
+          <h3 className="font-heading font-bold text-lg sm:text-3xl md:text-4xl uppercase tracking-tight max-w-xl">
             Ready to fix your business bottlenecks with complete clarity?
           </h3>
 
-          <p className="font-body text-white/75 text-sm sm:text-base max-w-lg leading-relaxed">
+          <p className="font-body text-white/75 text-xs sm:text-base max-w-lg leading-relaxed">
             Book a free 30-minute discovery call. We’ll look at your enquiry flow and give you an honest, practical recommendation.
           </p>
 
-          <Magnet padding={50} strength={3.5} className="inline-block">
+          <Magnet padding={50} strength={3.5} className="inline-block w-full sm:w-auto">
             <a
               href="#contact"
-              className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white text-[#0B3215] font-body font-bold text-sm uppercase tracking-widest hover:bg-neutral-100 transition-all duration-300 shadow-xl active:scale-95"
+              className="inline-flex items-center justify-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 rounded-full bg-white text-[#0B3215] font-body font-bold text-xs sm:text-sm uppercase tracking-wider hover:bg-neutral-100 transition-all duration-300 shadow-xl active:scale-95 w-full sm:w-auto text-center"
             >
               <span>Book a Discovery Call</span>
               <ArrowRight className="w-4 h-4 text-[#0B3215]" />

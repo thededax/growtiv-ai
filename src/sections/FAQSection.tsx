@@ -46,37 +46,37 @@ export default function FAQSection() {
   return (
     <section
       id="faq"
-      className="bg-[#07240f] text-white border-t border-white/10 px-5 sm:px-8 md:px-12 py-20 sm:py-24 md:py-32 relative w-full"
+      className="bg-[#07240f] text-white border-t border-white/10 px-4 sm:px-8 md:px-12 py-10 sm:py-20 md:py-32 relative w-full"
     >
       <div className="max-w-4xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-14 sm:mb-20">
-          <div className="mb-3">
+        <div className="text-center mb-8 sm:mb-16">
+          <div className="mb-2 sm:mb-3">
             <ShinyText
               text="TRANSPARENT ANSWERS • NO JARGON"
               speed={3.5}
-              className="font-body font-semibold uppercase tracking-widest text-xs sm:text-sm text-emerald-400"
+              className="font-body font-semibold uppercase tracking-widest text-[11px] sm:text-sm text-emerald-400"
             />
           </div>
           <h2
             className="hero-heading font-heading font-bold uppercase leading-none tracking-tight"
-            style={{ fontSize: 'clamp(2.5rem, 8vw, 100px)' }}
+            style={{ fontSize: 'clamp(1.85rem, 7.5vw, 100px)' }}
           >
             Frequently Asked Questions
           </h2>
-          <p className="font-body text-white/75 text-sm sm:text-base md:text-lg mt-4 max-w-xl mx-auto leading-relaxed">
+          <p className="font-body text-white/75 text-xs sm:text-base md:text-lg mt-2.5 sm:mt-4 max-w-xl mx-auto leading-relaxed">
             Straightforward answers to the questions Indian business owners ask before working with us.
           </p>
         </div>
 
         {/* Accessible Accordion List */}
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           {FAQS.map((faq, idx) => {
             const isOpen = openIndex === idx;
             return (
               <FadeIn key={faq.question} delay={idx * 0.05} y={15}>
                 <div
-                  className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
+                  className={`rounded-xl sm:rounded-2xl border transition-all duration-300 overflow-hidden ${
                     isOpen
                       ? 'border-emerald-500/40 bg-white/[0.05] shadow-lg'
                       : 'border-white/10 bg-white/[0.02] hover:border-white/25'
@@ -84,32 +84,32 @@ export default function FAQSection() {
                 >
                   <button
                     onClick={() => toggle(idx)}
-                    className="w-full flex items-center justify-between text-left p-5 sm:p-6 md:p-7 gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
+                    className="w-full flex items-center justify-between text-left p-3.5 sm:p-6 md:p-7 gap-3 sm:gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
                     aria-expanded={isOpen}
                   >
-                    <span className="font-heading font-bold text-base sm:text-lg md:text-xl text-white tracking-tight">
+                    <span className="font-heading font-bold text-sm sm:text-lg md:text-xl text-white tracking-tight">
                       {faq.question}
                     </span>
                     <span
-                      className={`shrink-0 w-8 h-8 rounded-full border flex items-center justify-center transition-all duration-300 ${
+                      className={`shrink-0 w-6 h-6 sm:w-8 sm:h-8 rounded-full border flex items-center justify-center transition-all duration-300 ${
                         isOpen
                           ? 'border-emerald-400 bg-emerald-500 text-black'
                           : 'border-white/20 bg-transparent text-white'
                       }`}
                     >
-                      {isOpen ? <Minus className="w-4 h-4 stroke-[3]" /> : <Plus className="w-4 h-4 stroke-[2.5]" />}
+                      {isOpen ? <Minus className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[3]" /> : <Plus className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.5]" />}
                     </span>
                   </button>
 
                   <div
-                    className={`grid transition-all duration-300 ease-in-out px-5 sm:px-6 md:px-7 ${
+                    className={`grid transition-all duration-300 ease-in-out px-3.5 sm:px-6 md:px-7 ${
                       isOpen
-                        ? 'grid-rows-[1fr] opacity-100 pb-5 sm:pb-6 md:pb-7'
+                        ? 'grid-rows-[1fr] opacity-100 pb-3.5 sm:pb-6 md:pb-7'
                         : 'grid-rows-[0fr] opacity-0 pb-0'
                     }`}
                   >
                     <div className="overflow-hidden">
-                      <p className="font-body font-normal text-xs sm:text-sm md:text-base text-white/80 leading-relaxed border-t border-white/10 pt-4">
+                      <p className="font-body font-normal text-xs sm:text-sm md:text-base text-white/80 leading-relaxed border-t border-white/10 pt-3 sm:pt-4">
                         {faq.answer}
                       </p>
                     </div>

@@ -11,15 +11,15 @@ export default function NotFoundPage() {
         canonicalPath="/404"
       />
 
-      <div className="w-full min-h-[70vh] flex items-center justify-center px-5 sm:px-8 py-32 text-center">
+      <div className="w-full min-h-[60vh] sm:min-h-[70vh] flex items-center justify-center px-4 sm:px-8 py-20 sm:py-32 text-center">
         <div className="max-w-md mx-auto">
-          <span className="font-heading font-bold text-7xl sm:text-8xl text-emerald-400 block mb-4">
+          <span className="font-heading font-bold text-6xl sm:text-8xl text-emerald-400 block mb-3 sm:mb-4">
             404
           </span>
-          <h1 className="font-heading font-bold text-2xl sm:text-3xl uppercase text-white mb-3">
+          <h1 className="font-heading font-bold text-xl sm:text-3xl uppercase text-white mb-2.5 sm:mb-3">
             Page Not Found
           </h1>
-          <p className="font-body text-white/75 text-sm sm:text-base leading-relaxed mb-8">
+          <p className="font-body text-white/75 text-xs sm:text-base leading-relaxed mb-6 sm:mb-8">
             The page you requested could not be located. Explore our core services or return to the home page.
           </p>
 

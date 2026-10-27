@@ -20,34 +20,34 @@ export default function FooterSection() {
       hoverCharColor="#ffffff"
       parallaxStrength={25}
       columns={75}
-      className="min-h-[580px] sm:min-h-[680px] md:min-h-[750px] w-full border-t border-white/10 flex flex-col justify-between relative"
+      className="min-h-[460px] sm:min-h-[640px] md:min-h-[720px] w-full border-t border-white/10 flex flex-col justify-between relative"
     >
-      <div className="max-w-7xl mx-auto w-full pt-12 sm:pt-16 px-6 sm:px-10 md:px-14">
+      <div className="max-w-7xl mx-auto w-full pt-8 sm:pt-14 px-4 sm:px-8 md:px-14">
         {/* Top Header / Links Area */}
-        <div className="flex flex-col md:flex-row items-start justify-between gap-8 pb-10 border-b border-white/10">
+        <div className="flex flex-col md:flex-row items-start justify-between gap-6 sm:gap-8 pb-6 sm:pb-10 border-b border-white/10">
           {/* Brand info */}
           <div className="max-w-sm">
-            <Link to="/" className="flex items-center gap-3 mb-3 inline-block">
+            <Link to="/" className="flex items-center gap-2.5 mb-2.5 inline-block">
               <img
                 src="/logo-mark-white.png"
                 alt="GrowtivAI"
-                className="w-9 h-9 object-contain drop-shadow-[0_0_10px_rgba(34,197,94,0.4)]"
+                className="w-8 h-8 sm:w-9 sm:h-9 object-contain drop-shadow-[0_0_10px_rgba(34,197,94,0.4)]"
               />
-              <span className="font-heading font-bold text-2xl uppercase tracking-wider text-white">
+              <span className="font-heading font-bold text-xl sm:text-2xl uppercase tracking-wider text-white">
                 GrowtivAI
               </span>
             </Link>
-            <p className="font-body text-white/70 text-xs sm:text-sm leading-relaxed mb-4">
+            <p className="font-body text-white/70 text-xs sm:text-sm leading-relaxed mb-3">
               AI Growth &amp; Automation Partner for Indian businesses. We build custom websites, software, and practical AI systems that fix real bottlenecks and drive revenue.
             </p>
-            <div className="inline-flex items-center gap-2.5 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[11px] font-mono uppercase tracking-widest text-emerald-400">
+            <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] sm:text-[11px] font-mono uppercase tracking-widest text-emerald-400">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
               <ShinyText text="Available for New Projects" speed={3.5} className="font-mono text-emerald-300 tracking-widest" />
             </div>
           </div>
 
           {/* Quick Navigation & Connect */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 sm:gap-12">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-5 sm:gap-8 md:gap-12 w-full md:w-auto">
             <div>
               <p className="font-heading font-semibold text-xs uppercase tracking-widest text-white/40 mb-3">
                 Navigation

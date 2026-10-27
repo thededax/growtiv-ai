@@ -59,7 +59,14 @@ const wait = (ms: number) => new Promise<void>((r) => setTimeout(r, ms));
 export default function CinematicPreloader() {
   const reducedMotion = useReducedMotion();
 
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(() => {
+    try {
+      if (typeof window !== 'undefined' && sessionStorage.getItem('growtiv_preloader_seen')) {
+        return false;
+      }
+    } catch (e) {}
+    return true;
+  });
   const [expandingCircle, setExpandingCircle] = useState(false);
   const [circleRadius, setCircleRadius] = useState(29);
   const [lettersOpacity, setLettersOpacity] = useState(1);
@@ -70,6 +77,13 @@ export default function CinematicPreloader() {
   const zoomCtrl = useAnimation();
 
   useEffect(() => {
+    try {
+      if (sessionStorage.getItem('growtiv_preloader_seen')) {
+        setVisible(false);
+        return;
+      }
+    } catch (e) {}
+
     (window as any).__preloaderT0 = performance.now();
     setVisible(true);
     setExpandingCircle(false);
@@ -96,6 +110,9 @@ export default function CinematicPreloader() {
       cancelled = true;
       unlockScroll();
       setVisible(false);
+      try {
+        sessionStorage.setItem('growtiv_preloader_seen', '1');
+      } catch (e) {}
     };
 
     const failsafeId = setTimeout(finish, FAILSAFE_MS);

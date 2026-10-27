@@ -32,10 +32,10 @@ export default function ProjectDetailPage() {
         canonicalPath={`/work/${project.slug}`}
       />
 
-      <div className="w-full pt-32 sm:pt-36 md:pt-40 pb-20 sm:pb-28 px-5 sm:px-8 md:px-12 max-w-6xl mx-auto">
+      <div className="w-full pt-24 sm:pt-32 md:pt-36 pb-12 sm:pb-24 px-4 sm:px-8 md:px-12 max-w-6xl mx-auto">
         
         {/* Breadcrumb & Back Link */}
-        <div className="mb-8 flex items-center justify-between gap-4">
+        <div className="mb-6 sm:mb-8 flex items-center justify-between gap-4">
           <Link
             to="/work"
             className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-emerald-400 hover:text-white transition-colors"
@@ -43,7 +43,7 @@ export default function ProjectDetailPage() {
             <ArrowLeft className="w-3.5 h-3.5" />
             <span>Back to All Work</span>
           </Link>
-          <div className="flex items-center gap-2 text-[11px] font-mono text-white/50 uppercase">
+          <div className="flex items-center gap-2 text-[10px] sm:text-[11px] font-mono text-white/50 uppercase">
             <span>Project {project.number}</span>
             <span>•</span>
             <span className="text-emerald-300">{project.projectType}</span>
@@ -51,8 +51,8 @@ export default function ProjectDetailPage() {
         </div>
 
         {/* Project Header */}
-        <div className="max-w-4xl mb-12">
-          <div className="flex flex-wrap items-center gap-2 mb-4">
+        <div className="max-w-4xl mb-8 sm:mb-12">
+          <div className="flex flex-wrap items-center gap-2 mb-3 sm:mb-4">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-xs font-mono uppercase tracking-wider">
               {isWebsite ? <Globe className="w-3 h-3 text-emerald-400" /> : <Bot className="w-3 h-3 text-emerald-400" />}
               <span>{project.badge}</span>
@@ -63,21 +63,21 @@ export default function ProjectDetailPage() {
             </span>
           </div>
 
-          <h1 className="font-heading font-bold uppercase tracking-tight text-white leading-[0.95] text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6">
+          <h1 className="font-heading font-bold uppercase tracking-tight text-white leading-[0.98] sm:leading-[0.95] text-2xl sm:text-4xl md:text-5xl lg:text-6xl mb-3 sm:mb-6">
             {project.title}
           </h1>
 
-          <p className="font-body text-white/85 text-base sm:text-lg md:text-xl leading-relaxed">
+          <p className="font-body text-white/85 text-sm sm:text-lg md:text-xl leading-relaxed">
             {project.summary}
           </p>
 
           {project.demoUrl && (
-            <div className="mt-6">
+            <div className="mt-5 sm:mt-6">
               <a
                 href={project.demoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-500 hover:bg-emerald-400 text-[#07240f] font-heading font-bold text-xs uppercase tracking-wider transition-all duration-200 shadow-xl active:scale-95"
+                className="inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-emerald-500 hover:bg-emerald-400 text-[#07240f] font-heading font-bold text-xs uppercase tracking-wider transition-all duration-200 shadow-xl active:scale-95"
               >
                 <span>Live Link</span>
                 <ExternalLink className="w-4 h-4" />
@@ -87,23 +87,23 @@ export default function ProjectDetailPage() {
         </div>
 
         {/* Hero Visual Banner */}
-        <div className="rounded-3xl overflow-hidden border border-white/20 mb-14 shadow-2xl bg-black/40">
+        <div className="rounded-2xl sm:rounded-3xl overflow-hidden border border-white/20 mb-8 sm:mb-14 shadow-2xl bg-black/40">
           <img
             src={project.images.hero}
             alt={project.title}
-            className="w-full h-auto max-h-[560px] object-cover"
+            className="w-full h-auto max-h-[420px] sm:max-h-[560px] object-cover"
           />
         </div>
 
         {/* Measurable Impact Metrics */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-16">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-4 mb-8 sm:mb-16">
           {project.metrics.map((metric) => (
             <div
               key={metric}
-              className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 text-center flex flex-col justify-center"
+              className="p-3.5 sm:p-5 rounded-xl sm:rounded-2xl bg-white/[0.03] border border-white/10 text-center flex flex-col justify-center"
             >
-              <Gauge className="w-4 h-4 text-emerald-400 mx-auto mb-2" />
-              <span className="font-heading font-bold text-sm sm:text-base text-white uppercase tracking-tight">
+              <Gauge className="w-4 h-4 text-emerald-400 mx-auto mb-1.5 sm:mb-2" />
+              <span className="font-heading font-bold text-xs sm:text-base text-white uppercase tracking-tight">
                 {metric}
               </span>
             </div>
@@ -111,45 +111,45 @@ export default function ProjectDetailPage() {
         </div>
 
         {/* The Problem & The Solution Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 mb-8 sm:mb-16">
           {/* Problem */}
-          <div className="p-7 sm:p-9 rounded-3xl bg-white/[0.03] border border-white/10">
-            <span className="text-xs font-mono uppercase tracking-widest text-amber-400 font-bold block mb-2">
+          <div className="p-4 sm:p-8 rounded-2xl sm:rounded-3xl bg-white/[0.03] border border-white/10">
+            <span className="text-xs font-mono uppercase tracking-widest text-amber-400 font-bold block mb-1.5 sm:mb-2">
               01 • The Business Bottleneck
             </span>
-            <h2 className="font-heading font-bold text-xl uppercase text-white mb-4">
+            <h2 className="font-heading font-bold text-base sm:text-xl uppercase text-white mb-2.5 sm:mb-4">
               Where Time and Inquiries Were Lost
             </h2>
-            <p className="font-body text-sm sm:text-base text-white/80 leading-relaxed">
+            <p className="font-body text-xs sm:text-base text-white/80 leading-relaxed">
               {project.problem}
             </p>
           </div>
 
           {/* Solution */}
-          <div className="p-7 sm:p-9 rounded-3xl bg-emerald-950/40 border border-emerald-500/20">
-            <span className="text-xs font-mono uppercase tracking-widest text-emerald-400 font-bold block mb-2">
+          <div className="p-4 sm:p-8 rounded-2xl sm:rounded-3xl bg-emerald-950/40 border border-emerald-500/20">
+            <span className="text-xs font-mono uppercase tracking-widest text-emerald-400 font-bold block mb-1.5 sm:mb-2">
               02 • The Working Architecture
             </span>
-            <h2 className="font-heading font-bold text-xl uppercase text-white mb-4">
+            <h2 className="font-heading font-bold text-base sm:text-xl uppercase text-white mb-2.5 sm:mb-4">
               What We Engineered and Delivered
             </h2>
-            <p className="font-body text-sm sm:text-base text-white/80 leading-relaxed">
+            <p className="font-body text-xs sm:text-base text-white/80 leading-relaxed">
               {project.solution}
             </p>
           </div>
         </div>
 
         {/* Key Features & Deliverables */}
-        <div className="p-8 sm:p-10 rounded-3xl bg-white/[0.02] border border-white/15 mb-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="p-4 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl bg-white/[0.02] border border-white/15 mb-8 sm:mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
             <div>
-              <h3 className="font-heading font-bold text-lg uppercase text-white mb-4 flex items-center gap-2">
+              <h3 className="font-heading font-bold text-base sm:text-lg uppercase text-white mb-3 sm:mb-4 flex items-center gap-2">
                 <Sparkles className="w-4 h-4 text-emerald-400" />
                 <span>Delivered System Architecture</span>
               </h3>
-              <ul className="space-y-3 font-body text-xs sm:text-sm text-white/80">
+              <ul className="space-y-2.5 sm:space-y-3 font-body text-xs sm:text-sm text-white/80">
                 {project.deliverables.map((d) => (
-                  <li key={d} className="flex items-start gap-2.5">
+                  <li key={d} className="flex items-start gap-2 sm:gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                     <span>{d}</span>
                   </li>
@@ -158,13 +158,13 @@ export default function ProjectDetailPage() {
             </div>
 
             <div>
-              <h3 className="font-heading font-bold text-lg uppercase text-white mb-4 flex items-center gap-2">
+              <h3 className="font-heading font-bold text-base sm:text-lg uppercase text-white mb-3 sm:mb-4 flex items-center gap-2">
                 <Layers className="w-4 h-4 text-emerald-400" />
                 <span>Core Operational Capabilities</span>
               </h3>
-              <ul className="space-y-3 font-body text-xs sm:text-sm text-white/80">
+              <ul className="space-y-2.5 sm:space-y-3 font-body text-xs sm:text-sm text-white/80">
                 {project.features.map((f) => (
-                  <li key={f} className="flex items-start gap-2.5">
+                  <li key={f} className="flex items-start gap-2 sm:gap-2.5">
                     <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                     <span>{f}</span>
                   </li>
@@ -176,13 +176,13 @@ export default function ProjectDetailPage() {
 
         {/* Gallery Preview Images */}
         {project.images.gallery && project.images.gallery.length > 0 && (
-          <div className="mb-16">
-            <h3 className="text-xs font-mono uppercase tracking-widest text-white/50 font-bold mb-4">
+          <div className="mb-8 sm:mb-16">
+            <h3 className="text-xs font-mono uppercase tracking-widest text-white/50 font-bold mb-3 sm:mb-4">
               Interactive System Previews
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
               {project.images.gallery.map((imgUrl, idx) => (
-                <div key={idx} className="rounded-2xl overflow-hidden border border-white/10 bg-black/40">
+                <div key={idx} className="rounded-xl sm:rounded-2xl overflow-hidden border border-white/10 bg-black/40">
                   <img
                     src={imgUrl}
                     alt={`${project.title} screenshot ${idx + 1}`}
@@ -196,7 +196,7 @@ export default function ProjectDetailPage() {
         )}
 
         {/* Related Service Connection & CTA */}
-        <div className="p-8 sm:p-12 rounded-3xl bg-[#07240f] border border-white/20 text-center max-w-3xl mx-auto shadow-2xl">
+        <div className="p-5 sm:p-10 md:p-12 rounded-2xl sm:rounded-3xl bg-[#07240f] border border-white/20 text-center max-w-3xl mx-auto shadow-2xl">
           <span className="text-xs font-mono uppercase tracking-widest text-emerald-400 font-bold block mb-2">
             Related Core Service
           </span>

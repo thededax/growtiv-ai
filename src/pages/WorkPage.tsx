@@ -54,26 +54,26 @@ export default function WorkPage() {
         canonicalPath="/work"
       />
 
-      <div className="w-full pt-32 sm:pt-36 md:pt-40 pb-20 sm:pb-28 px-5 sm:px-8 md:px-12 max-w-7xl mx-auto">
+      <div className="w-full pt-24 sm:pt-32 md:pt-36 pb-12 sm:pb-24 px-4 sm:px-8 md:px-12 max-w-7xl mx-auto">
         
         {/* Page Header */}
-        <div className="max-w-3xl mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-emerald-400 text-xs font-mono uppercase tracking-widest mb-4">
+        <div className="max-w-3xl mb-8 sm:mb-14">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-emerald-400 text-xs font-mono uppercase tracking-widest mb-3.5">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
             <span>Proven Client Deployments</span>
           </div>
 
-          <h1 className="font-heading font-bold uppercase tracking-tight text-white leading-[0.95] text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6">
+          <h1 className="font-heading font-bold uppercase tracking-tight text-white leading-[0.98] sm:leading-[0.95] text-3xl sm:text-5xl md:text-6xl lg:text-7xl mb-4 sm:mb-6">
             Our Work.
           </h1>
 
-          <p className="font-body text-white/80 text-base sm:text-lg md:text-xl leading-relaxed">
+          <p className="font-body text-white/80 text-sm sm:text-lg md:text-xl leading-relaxed">
             Explore our real custom websites and digital platforms built for growing businesses. Click any Live Link to experience the deployed platforms.
           </p>
         </div>
 
         {/* Category Filter Tabs */}
-        <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-12 pb-4 border-b border-white/10">
+        <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-8 sm:mb-12 pb-3 sm:pb-4 border-b border-white/10">
           {FILTER_TABS.map((tab) => {
             const Icon = tab.icon;
             const isActive = activeFilter === tab.id;
@@ -82,7 +82,7 @@ export default function WorkPage() {
                 key={tab.id}
                 type="button"
                 onClick={() => handleFilterChange(tab.id)}
-                className={`inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-full text-xs font-heading font-semibold uppercase tracking-wider transition-all duration-200 ${
+                className={`inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs font-heading font-semibold uppercase tracking-wider transition-all duration-200 ${
                   isActive
                     ? 'bg-emerald-500 text-[#07240f] shadow-lg font-bold'
                     : 'bg-white/5 text-white/75 hover:text-white hover:bg-white/10 border border-white/10'
@@ -96,7 +96,7 @@ export default function WorkPage() {
         </div>
 
         {/* Portfolio Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8">
           <AnimatePresence mode="popLayout">
             {filteredProjects.map((project) => (
               <motion.article
@@ -106,7 +106,7 @@ export default function WorkPage() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.35 }}
-                className="rounded-3xl bg-[#07240f] border border-white/15 overflow-hidden flex flex-col justify-between group hover:border-emerald-400/50 transition-all duration-300 shadow-xl"
+                className="rounded-2xl sm:rounded-3xl bg-[#07240f] border border-white/15 overflow-hidden flex flex-col justify-between group hover:border-emerald-400/50 transition-all duration-300 shadow-xl"
               >
                 {/* Thumbnail Preview */}
                 <div className="relative aspect-[16/10] overflow-hidden bg-black/40">
@@ -119,7 +119,7 @@ export default function WorkPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#07240f] via-transparent to-transparent opacity-80" />
 
                   {/* Badges Overlay */}
-                  <div className="absolute top-3 left-3 right-3 flex items-center justify-between gap-2 pointer-events-none">
+                  <div className="absolute top-2.5 sm:top-3 left-2.5 sm:left-3 right-2.5 sm:right-3 flex items-center justify-between gap-2 pointer-events-none">
                     <span className="px-2.5 py-1 rounded-full text-[10px] font-mono uppercase tracking-wider bg-black/70 backdrop-blur-md text-emerald-300 border border-white/15">
                       {project.projectType}
                     </span>
@@ -130,20 +130,20 @@ export default function WorkPage() {
                 </div>
 
                 {/* Card Content */}
-                <div className="p-6 flex-1 flex flex-col justify-between">
+                <div className="p-4 sm:p-6 flex-1 flex flex-col justify-between">
                   <div>
-                    <p className="text-[11px] font-mono uppercase tracking-wider text-emerald-400 font-semibold mb-1">
+                    <p className="text-[10px] sm:text-[11px] font-mono uppercase tracking-wider text-emerald-400 font-semibold mb-1">
                       {project.industry}
                     </p>
-                    <h2 className="font-heading font-bold text-xl uppercase tracking-tight text-white mb-2 group-hover:text-emerald-300 transition-colors">
+                    <h2 className="font-heading font-bold text-lg sm:text-xl uppercase tracking-tight text-white mb-1.5 sm:mb-2 group-hover:text-emerald-300 transition-colors">
                       {project.title}
                     </h2>
-                    <p className="font-body text-xs sm:text-sm text-white/75 leading-relaxed mb-6">
+                    <p className="font-body text-xs sm:text-sm text-white/75 leading-relaxed mb-4 sm:mb-6">
                       {project.summary}
                     </p>
 
                     {/* Deliverables snippet */}
-                    <div className="space-y-1.5 mb-6">
+                    <div className="space-y-1.5 mb-4 sm:mb-6">
                       {project.deliverables.slice(0, 3).map((d) => (
                         <div key={d} className="flex items-center gap-2 text-xs text-white/70">
                           <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
@@ -154,12 +154,12 @@ export default function WorkPage() {
                   </div>
 
                   {/* Actions: Direct Live Link and Case Study */}
-                  <div className="pt-4 border-t border-white/10 flex items-center justify-between gap-3">
+                  <div className="pt-3.5 sm:pt-4 border-t border-white/10 flex items-center justify-between gap-3">
                     <a
                       href={project.demoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/15 hover:bg-emerald-500 text-emerald-300 hover:text-[#07240f] border border-emerald-500/30 font-heading font-bold text-xs uppercase tracking-wider transition-all duration-200 active:scale-95 shadow-md"
+                      className="inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full bg-emerald-500/15 hover:bg-emerald-500 text-emerald-300 hover:text-[#07240f] border border-emerald-500/30 font-heading font-bold text-xs uppercase tracking-wider transition-all duration-200 active:scale-95 shadow-md"
                     >
                       <span>Live Link</span>
                       <ExternalLink className="w-3.5 h-3.5" />
@@ -180,24 +180,24 @@ export default function WorkPage() {
         </div>
 
         {/* Discovery Call Bottom Banner */}
-        <div className="mt-20 p-8 sm:p-10 rounded-3xl bg-white/[0.03] border border-white/15 text-center max-w-3xl mx-auto">
-          <h3 className="font-heading font-bold text-2xl sm:text-3xl uppercase tracking-tight text-white mb-3">
+        <div className="mt-12 sm:mt-20 p-5 sm:p-10 rounded-2xl sm:rounded-3xl bg-white/[0.03] border border-white/15 text-center max-w-3xl mx-auto">
+          <h3 className="font-heading font-bold text-xl sm:text-3xl uppercase tracking-tight text-white mb-2 sm:mb-3">
             Need a Solution Built for Your Specific Workflow?
           </h3>
-          <p className="font-body text-white/75 text-sm sm:text-base leading-relaxed mb-6">
+          <p className="font-body text-white/75 text-xs sm:text-base leading-relaxed mb-5 sm:mb-6">
             We build custom websites and digital platforms tailored directly around how your business attracts, qualifies, and serves customers.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-3">
             <Link
               to="/contact"
-              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white text-[#0B3215] font-heading font-semibold text-xs uppercase tracking-wider hover:bg-neutral-100 transition-all shadow-lg active:scale-95"
+              className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-white text-[#0B3215] font-heading font-semibold text-xs uppercase tracking-wider hover:bg-neutral-100 transition-all shadow-lg active:scale-95 text-center"
             >
               <span>Discuss Your Project</span>
               <ArrowUpRight className="w-4 h-4 text-[#0B3215]" />
             </Link>
             <Link
               to="/services"
-              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white/10 hover:bg-white/15 border border-white/20 text-white font-heading font-semibold text-xs uppercase tracking-wider transition-all active:scale-95"
+              className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-full bg-white/10 hover:bg-white/15 border border-white/20 text-white font-heading font-semibold text-xs uppercase tracking-wider transition-all active:scale-95 text-center"
             >
               <span>Explore Our Services</span>
             </Link>

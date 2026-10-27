@@ -503,14 +503,14 @@ export function AnimatedFooter({
       <div className="pointer-events-none absolute inset-0 flex items-center justify-between">
         <div
           ref={leftWrapRef}
-          className="relative w-2/5 min-w-[200px] will-change-transform"
+          className="relative w-2/5 min-w-[120px] sm:min-w-[200px] will-change-transform"
           style={{ transform: `translateX(-${offEdge}%)` }}
         >
           <canvas ref={leftCanvasRef} className="block h-auto w-full" />
         </div>
         <div
           ref={rightWrapRef}
-          className="relative w-2/5 min-w-[200px] will-change-transform"
+          className="relative w-2/5 min-w-[120px] sm:min-w-[200px] will-change-transform"
           style={{ transform: `translateX(${offEdge}%)` }}
         >
           <canvas ref={rightCanvasRef} className="block h-auto w-full" />
@@ -521,13 +521,13 @@ export function AnimatedFooter({
       {children && <div className="relative z-20 w-full">{children}</div>}
 
       {/* Display headings */}
-      <div className="absolute inset-x-0 bottom-0 flex items-end justify-center gap-4 p-8">
+      <div className="absolute inset-x-0 bottom-0 flex items-end justify-center gap-4 p-4 sm:p-8">
         {headingLines.map((word, wi) => (
           <h2
             key={`${word}-${wi}`}
             aria-label={word}
             className="overflow-hidden font-medium leading-none tracking-tight pb-[0.15em] -mb-[0.15em]"
-            style={{ fontSize: "clamp(2rem, 13cqw, 11rem)" }}
+            style={{ fontSize: "clamp(1.75rem, 12cqw, 11rem)" }}
           >
             {Array.from(word).map((ch, ci) => (
               <span

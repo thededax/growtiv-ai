@@ -20,31 +20,31 @@ export default function AboutPage() {
         canonicalPath="/about"
       />
 
-      <div className="w-full pt-32 sm:pt-36 md:pt-40 pb-20 sm:pb-28 px-5 sm:px-8 md:px-12 max-w-5xl mx-auto">
+      <div className="w-full pt-24 sm:pt-32 md:pt-36 pb-12 sm:pb-24 px-4 sm:px-8 md:px-12 max-w-5xl mx-auto">
         
         {/* Page Header */}
-        <div className="max-w-3xl mb-16 sm:mb-20">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-emerald-400 text-xs font-mono uppercase tracking-widest mb-4">
+        <div className="max-w-3xl mb-8 sm:mb-16">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-emerald-400 text-xs font-mono uppercase tracking-widest mb-3.5">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
             <span>Founder-Led Engineering Partner</span>
           </div>
 
-          <h1 className="font-heading font-bold uppercase tracking-tight text-white leading-[0.95] text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6">
+          <h1 className="font-heading font-bold uppercase tracking-tight text-white leading-[0.98] sm:leading-[0.95] text-3xl sm:text-5xl md:text-6xl lg:text-7xl mb-4 sm:mb-6">
             Technology Should Make Business Easier.
           </h1>
 
-          <p className="font-body text-white/80 text-base sm:text-lg md:text-xl leading-relaxed">
+          <p className="font-body text-white/80 text-sm sm:text-lg md:text-xl leading-relaxed">
             GrowtivAI helps Indian business owners fix daily bottlenecks with custom websites and practical AI systems—without technical headaches, complex jargon, or having to figure out software alone.
           </p>
         </div>
 
         {/* Mission Statement Callout */}
-        <div className="p-8 sm:p-12 rounded-3xl bg-emerald-950/40 border border-emerald-500/30 mb-16 shadow-xl relative overflow-hidden">
-          <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-emerald-300 font-semibold mb-3">
+        <div className="p-5 sm:p-10 md:p-12 rounded-2xl sm:rounded-3xl bg-emerald-950/40 border border-emerald-500/30 mb-8 sm:mb-16 shadow-xl relative overflow-hidden">
+          <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-emerald-300 font-semibold mb-2.5 sm:mb-3">
             <Target className="w-4 h-4 text-emerald-400" />
             <span>Our Core Mission</span>
           </div>
-          <blockquote className="font-heading font-bold text-2xl sm:text-3xl md:text-4xl uppercase text-white leading-tight mb-4">
+          <blockquote className="font-heading font-bold text-lg sm:text-2xl md:text-4xl uppercase text-white leading-snug sm:leading-tight mb-3 sm:mb-4">
             &ldquo;Fix the problem that costs an Indian business owner the most time or money, with a working system they can see, understand and measure, not a tool they have to figure out alone.&rdquo;
           </blockquote>
           <p className="font-body text-xs sm:text-sm text-white/70">
@@ -53,15 +53,15 @@ export default function AboutPage() {
         </div>
 
         {/* Founder Story & Motivation */}
-        <div className="p-8 sm:p-12 rounded-3xl bg-white/[0.03] border border-white/10 mb-16">
-          <span className="text-xs font-mono uppercase tracking-widest text-emerald-400 font-bold block mb-2">
+        <div className="p-5 sm:p-10 md:p-12 rounded-2xl sm:rounded-3xl bg-white/[0.03] border border-white/10 mb-8 sm:mb-16">
+          <span className="text-xs font-mono uppercase tracking-widest text-emerald-400 font-bold block mb-1.5 sm:mb-2">
             The Perspective Behind GrowtivAI
           </span>
-          <h2 className="font-heading font-bold text-2xl sm:text-3xl uppercase text-white mb-6">
+          <h2 className="font-heading font-bold text-xl sm:text-3xl uppercase text-white mb-4 sm:mb-6">
             Why We Built GrowtivAI
           </h2>
 
-          <div className="space-y-4 font-body text-sm sm:text-base text-white/80 leading-relaxed">
+          <div className="space-y-3 sm:space-y-4 font-body text-xs sm:text-base text-white/80 leading-relaxed">
             <p>
               Most Indian small and medium business owners are inundated with generic sales pitches about &ldquo;AI revolutions&rdquo; and bloated enterprise software suites. Yet on the ground, the reality looks quite different: business owners still spend hours manually typing the same course fees, sending property brochures late at night, or chasing enquiries lost across scattered personal WhatsApp chats.
             </p>
@@ -75,17 +75,17 @@ export default function AboutPage() {
         </div>
 
         {/* How We Work: 5 Steps */}
-        <div className="mb-16">
-          <div className="mb-8">
+        <div className="mb-8 sm:mb-16">
+          <div className="mb-5 sm:mb-8">
             <span className="text-xs font-mono uppercase tracking-widest text-emerald-400 font-bold block mb-1">
               Structured Engineering
             </span>
-            <h2 className="font-heading font-bold text-2xl sm:text-3xl uppercase text-white">
+            <h2 className="font-heading font-bold text-xl sm:text-3xl uppercase text-white">
               How We Work With You
             </h2>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-3 sm:space-y-4">
             {[
               {
                 step: '01',
@@ -115,13 +115,13 @@ export default function AboutPage() {
             ].map((s) => (
               <div
                 key={s.step}
-                className="p-6 rounded-2xl bg-white/[0.03] border border-white/10 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6"
+                className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-white/[0.03] border border-white/10 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6"
               >
-                <span className="font-heading font-bold text-3xl text-emerald-400 shrink-0">
+                <span className="font-heading font-bold text-2xl sm:text-3xl text-emerald-400 shrink-0">
                   {s.step}
                 </span>
                 <div>
-                  <h3 className="font-heading font-bold text-base uppercase text-white mb-1">
+                  <h3 className="font-heading font-bold text-sm sm:text-base uppercase text-white mb-1">
                     {s.title}
                   </h3>
                   <p className="font-body text-xs sm:text-sm text-white/75 leading-relaxed">
@@ -134,17 +134,17 @@ export default function AboutPage() {
         </div>
 
         {/* 5 Working Principles */}
-        <div className="mb-16">
-          <div className="mb-8">
+        <div className="mb-8 sm:mb-16">
+          <div className="mb-5 sm:mb-8">
             <span className="text-xs font-mono uppercase tracking-widest text-emerald-400 font-bold block mb-1">
               Our Commitments
             </span>
-            <h2 className="font-heading font-bold text-2xl sm:text-3xl uppercase text-white">
+            <h2 className="font-heading font-bold text-xl sm:text-3xl uppercase text-white">
               5 Working Principles
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             {[
               {
                 icon: Compass,
@@ -176,15 +176,15 @@ export default function AboutPage() {
               return (
                 <div
                   key={p.title}
-                  className={`p-6 rounded-2xl bg-white/[0.03] border border-white/10 flex flex-col justify-between ${
+                  className={`p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-white/[0.03] border border-white/10 flex flex-col justify-between ${
                     idx === 4 ? 'sm:col-span-2' : ''
                   }`}
                 >
                   <div>
-                    <div className="w-10 h-10 rounded-xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-3">
-                      <Icon className="w-5 h-5" />
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-2.5 sm:mb-3">
+                      <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
                     </div>
-                    <h3 className="font-heading font-bold text-base uppercase text-white mb-2">
+                    <h3 className="font-heading font-bold text-sm sm:text-base uppercase text-white mb-1.5 sm:mb-2">
                       {p.title}
                     </h3>
                     <p className="font-body text-xs sm:text-sm text-white/75 leading-relaxed">
@@ -198,7 +198,7 @@ export default function AboutPage() {
         </div>
 
         {/* Bottom CTA Banner */}
-        <div className="p-8 sm:p-12 rounded-3xl bg-[#07240f] border border-white/20 text-center shadow-2xl">
+        <div className="p-5 sm:p-10 md:p-12 rounded-2xl sm:rounded-3xl bg-[#07240f] border border-white/20 text-center shadow-2xl">
           <h3 className="font-heading font-bold text-2xl sm:text-3xl uppercase tracking-tight text-white mb-3">
             Ready to Build a Working System for Your Business?
           </h3>

@@ -70,31 +70,31 @@ export default function ProblemsWeSolveSection() {
   return (
     <section
       id="problems"
-      className="stack-section bg-white rounded-t-[36px] sm:rounded-t-[48px] md:rounded-t-[56px] shadow-[0_-25px_60px_rgba(0,0,0,0.35)] border-t border-black/5 px-5 sm:px-8 md:px-12 py-20 sm:py-24 md:py-32 relative text-[#0B3215] w-full"
+      className="stack-section bg-white rounded-t-[28px] sm:rounded-t-[48px] md:rounded-t-[56px] shadow-[0_-25px_60px_rgba(0,0,0,0.35)] border-t border-black/5 px-4 sm:px-8 md:px-12 py-10 sm:py-20 md:py-32 relative text-[#0B3215] w-full"
     >
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-20">
-          <div className="mb-3">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-16 md:mb-20">
+          <div className="mb-2 sm:mb-3">
             <ShinyText
               text="REAL CHALLENGES • PRACTICAL SOLUTIONS"
               speed={3.5}
-              className="font-body font-semibold uppercase tracking-widest text-xs sm:text-sm text-emerald-800"
+              className="font-body font-semibold uppercase tracking-widest text-[11px] sm:text-sm text-emerald-800"
             />
           </div>
           <h2
             className="font-heading font-bold uppercase leading-none tracking-tight text-[#0B3215]"
-            style={{ fontSize: 'clamp(2.4rem, 8vw, 90px)' }}
+            style={{ fontSize: 'clamp(1.75rem, 6.5vw, 90px)' }}
           >
             Problems We Solve
           </h2>
-          <p className="font-body text-[#0B3215]/75 text-sm sm:text-base md:text-lg mt-4 leading-relaxed">
+          <p className="font-body text-[#0B3215]/75 text-xs sm:text-base md:text-lg mt-2.5 sm:mt-4 leading-relaxed">
             You don’t need another complicated dashboard or a flashy tech gimmick. You need practical, working systems that stop enquiries from slipping away and cut out hours of repetitive manual work.
           </p>
         </div>
 
         {/* 2x2 Grid of Detailed Problems */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-14 sm:mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-8 mb-8 sm:mb-16">
           {PROBLEMS.map((item, idx) => {
             const Icon = item.icon;
             return (
@@ -108,31 +108,31 @@ export default function ProblemsWeSolveSection() {
                 <SpotlightCard
                   spotlightColor="rgba(11, 50, 21, 0.06)"
                   size={450}
-                  className="rounded-3xl border border-[#0B3215]/15 bg-[#0B3215]/[0.02] hover:bg-[#0B3215]/[0.04] p-6 sm:p-8 md:p-9 transition-all duration-300 h-full flex flex-col justify-between"
+                  className="rounded-2xl sm:rounded-3xl border border-[#0B3215]/15 bg-[#0B3215]/[0.02] hover:bg-[#0B3215]/[0.04] p-4 sm:p-7 md:p-9 transition-all duration-300 h-full flex flex-col justify-between"
                 >
                   <div>
                     {/* Header: Number & Badge */}
-                    <div className="flex items-center justify-between gap-4 mb-5 pb-4 border-b border-[#0B3215]/10">
-                      <div className="flex items-center gap-3">
-                        <span className="font-heading font-bold text-2xl sm:text-3xl text-emerald-700">
+                    <div className="flex items-center justify-between gap-3 mb-3 sm:mb-5 pb-2.5 sm:pb-4 border-b border-[#0B3215]/10">
+                      <div className="flex items-center gap-2 sm:gap-3">
+                        <span className="font-heading font-bold text-xl sm:text-3xl text-emerald-700">
                           {item.number}
                         </span>
-                        <span className="text-xs font-mono font-semibold uppercase tracking-wider px-3 py-1 rounded-full bg-[#0B3215]/[0.06] text-[#0B3215]">
+                        <span className="text-[10px] sm:text-xs font-mono font-semibold uppercase tracking-wider px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-[#0B3215]/[0.06] text-[#0B3215]">
                           {item.badge}
                         </span>
                       </div>
-                      <div className="w-10 h-10 rounded-xl bg-[#0B3215]/10 flex items-center justify-center text-[#0B3215]">
-                        <Icon className="w-5 h-5" />
+                      <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-[#0B3215]/10 flex items-center justify-center text-[#0B3215]">
+                        <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
                       </div>
                     </div>
 
                     {/* Problem Title */}
-                    <h3 className="font-heading font-bold text-lg sm:text-xl md:text-2xl text-[#0B3215] uppercase tracking-tight mb-4">
+                    <h3 className="font-heading font-bold text-base sm:text-xl md:text-2xl text-[#0B3215] uppercase tracking-tight mb-2 sm:mb-4">
                       {item.title}
                     </h3>
 
                     {/* Problem Description */}
-                    <div className="mb-4">
+                    <div className="mb-2.5 sm:mb-4">
                       <p className="font-body text-[#0B3215]/80 text-xs sm:text-sm leading-relaxed">
                         <strong className="text-[#0B3215] font-semibold">The everyday reality:</strong>{' '}
                         {item.problem}
@@ -140,8 +140,8 @@ export default function ProblemsWeSolveSection() {
                     </div>
 
                     {/* Why It Matters */}
-                    <div className="mb-5 p-3.5 rounded-xl bg-amber-500/[0.08] border border-amber-600/20 flex items-start gap-2.5">
-                      <AlertCircle className="w-4 h-4 text-amber-700 shrink-0 mt-0.5" />
+                    <div className="mb-2.5 sm:mb-4 p-2.5 sm:p-3.5 rounded-xl bg-amber-500/[0.08] border border-amber-600/20 flex items-start gap-2">
+                      <AlertCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-700 shrink-0 mt-0.5" />
                       <p className="font-body text-xs sm:text-sm text-amber-950/90 leading-relaxed">
                         <strong className="font-semibold text-amber-900">Why it hurts:</strong>{' '}
                         {item.impact}
@@ -149,8 +149,8 @@ export default function ProblemsWeSolveSection() {
                     </div>
 
                     {/* Solution */}
-                    <div className="p-4 rounded-xl bg-emerald-500/[0.08] border border-emerald-600/20 flex items-start gap-2.5">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-700 shrink-0 mt-0.5" />
+                    <div className="p-2.5 sm:p-4 rounded-xl bg-emerald-500/[0.08] border border-emerald-600/20 flex items-start gap-2">
+                      <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-700 shrink-0 mt-0.5" />
                       <p className="font-body text-xs sm:text-sm text-emerald-950 leading-relaxed">
                         <strong className="font-semibold text-emerald-900">How GrowtivAI solves it:</strong>{' '}
                         {item.solution}
@@ -159,7 +159,7 @@ export default function ProblemsWeSolveSection() {
                   </div>
 
                   {/* Service Alignment Tag */}
-                  <div className="mt-6 pt-4 border-t border-[#0B3215]/10 flex items-center justify-between text-xs font-mono text-emerald-800">
+                  <div className="mt-3 sm:mt-6 pt-2.5 sm:pt-4 border-t border-[#0B3215]/10 flex items-center justify-between text-[11px] sm:text-xs font-mono text-emerald-800">
                     <span>{item.tag}</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </div>
@@ -170,9 +170,9 @@ export default function ProblemsWeSolveSection() {
         </div>
 
         {/* Section Bottom Transition Card */}
-        <div className="p-6 sm:p-8 rounded-2xl bg-[#0B3215] text-white flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div className="p-4 sm:p-7 rounded-2xl bg-[#0B3215] text-white flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-6">
           <div>
-            <h4 className="font-heading font-bold text-lg sm:text-xl uppercase tracking-tight">
+            <h4 className="font-heading font-bold text-base sm:text-xl uppercase tracking-tight">
               Tired of losing enquiries and wasting hours on repetitive tasks?
             </h4>
             <p className="font-body text-white/70 text-xs sm:text-sm mt-1">
@@ -181,7 +181,7 @@ export default function ProblemsWeSolveSection() {
           </div>
           <a
             href="#services"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[#0B3215] font-body font-bold text-xs sm:text-sm uppercase tracking-wider hover:bg-neutral-100 transition-colors shrink-0"
+            className="inline-flex items-center gap-2 px-5 py-2.5 sm:px-6 sm:py-3 rounded-full bg-white text-[#0B3215] font-body font-bold text-xs sm:text-sm uppercase tracking-wider hover:bg-neutral-100 transition-colors shrink-0"
           >
             <span>See Our Core Services</span>
             <ArrowRight className="w-4 h-4" />
